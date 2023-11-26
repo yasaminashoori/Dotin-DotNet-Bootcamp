@@ -10,6 +10,11 @@
 -- Person ( id , fn , ln , role )
 
 
+
+
+
+
+
 --        ( 1 , aaa , bbb ,  مدیر )
 --        ( 1 , aaa , bbb ,  مدیرارشد )
 --        ( 1 , aaa , bbb ,  کاربر )
