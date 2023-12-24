@@ -1,4 +1,4 @@
-# SQLServer-Course
+# Dotin_DotNet_Bootcamp
 
 -----------SESSION 2------------
 
