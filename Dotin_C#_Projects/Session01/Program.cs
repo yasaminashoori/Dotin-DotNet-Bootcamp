@@ -11,6 +11,7 @@ namespace Session01
         static void Main(string[] args)
         {
             //Session01
+            Console.WriteLine("Hello World");
         }
     }
 }
