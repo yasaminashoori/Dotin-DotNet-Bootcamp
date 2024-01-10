@@ -21,7 +21,7 @@ namespace DirecoryFiles
             {
                 Console.WriteLine("File Name: {0}\n" +
                     "File Length: {1}\n" +
-                    "File Details: {2}\n",
+                    "File Extension: {2}\n",
                     i.Name,
                     i.Length,
                     i.Extension);
