@@ -8,5 +8,9 @@ namespace CSProjects_Part01.Classes
 {
     internal class Greeting
     {
+        public static void GreetingMessage()
+        {
+            Console.WriteLine("HI THERE ^__^");
+        }
     }
 }

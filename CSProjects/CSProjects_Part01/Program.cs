@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using CSProjects_Part01.Classes;
 
 namespace CSProjects_Part01
 {
@@ -135,7 +137,7 @@ namespace CSProjects_Part01
 
             //int age2 = Convert.ToSingle()
 
-            byte age3 = byte.Parse(Console.ReadLine());
+            //byte age3 = byte.Parse(Console.ReadLine());
 
             long mylong = 123456;
 
@@ -367,23 +369,23 @@ namespace CSProjects_Part01
             //Console.Clear();
 
             #region [ While - DoWhile ]
-            int j = 0;
-            while (j <= 10)
+            int j2 = 0;
+            while (j2 <= 10)
             {
-                Console.WriteLine($"J = {j}");
+                Console.WriteLine($"J = {j2}");
                 // j++;
-                j += 2;
+                j2 += 2;
             }
 
 
             //-----------------------
 
-            int k = 20;
+            int k2 = 20;
             do
             {
-                Console.WriteLine($"K = {k}");
+                Console.WriteLine($"K = {k2}");
 
-            } while (k <= 10);
+            } while (k2 <= 10);
             #endregion
 
             //Console.Clear();
@@ -640,11 +642,9 @@ namespace CSProjects_Part01
             // SIZE = 4; //The left-hand side of an assignment must be a variable, property or indexer 
             // SIZE++; //The operand of an increment or decrement operator must be a variable, property or indexer   
 
-
-
             Console.WriteLine("You Should Enter {0} Numbers : ", SIZE);
 
-            int[] numbers = new int[SIZE];
+            int[] numbers2 = new int[SIZE];
 
             for (int i = 0; i < SIZE; i++)
             {
@@ -653,14 +653,14 @@ namespace CSProjects_Part01
                     Console.ForegroundColor = ConsoleColor.Red;
                 }
                 Console.Write("Plz Enter Number {0} : ", i + 1);
-                numbers[i] = int.Parse(Console.ReadLine());
+                numbers2[i] = int.Parse(Console.ReadLine());
             }
 
             Console.ForegroundColor = ConsoleColor.Green;
 
             for (int i = 0; i < SIZE; i++)
             {
-                sum += numbers[i];
+                sum += numbers2[i];
             }
 
             average = (float)sum / SIZE;
@@ -693,6 +693,7 @@ namespace CSProjects_Part01
             Console.ReadKey();
             #endregion
 
+            #region Part10
             // METHOD 
 
             // BLACK BOX
@@ -728,21 +729,423 @@ namespace CSProjects_Part01
             // فراخوانی متد
             // صدا کردن متد
             // Call / Invoke
-            CSProjects_Part01.Classes.Greeting();
+            CSProjects_Part01.Classes.Greeting.GreetingMessage();
 
-            int javab = MySimpleMathClass.DoSum(12, 20);
+            int javab = MathOperations.DoSum(12, 20);
 
-            Console.WriteLine($"Javab = {javab}");
+            Console.WriteLine($"Sum = {javab}");
 
-            float sum = MySimpleMathClass.DoSum(12.3F, 12);
+            float divide = MathOperations.DoDivide(12.3F, 12.9F); //should have F to be float or error!
+
+            Console.WriteLine($"Divide:{divide}");
+
+            Console.ReadKey();
+            #endregion
+
+            #region Part11
+
+            // Value Type : stack , struct , non nullable, like char, float, double
+            int aValue = 10;
+            int bValue = aValue;
+
+            aValue++;
+
+            Console.WriteLine($"a = {aValue} b = {bValue}");
+
+            // Reference Type : heap , class , nullable
+
+            string s1 = "Soroush Sadr";
+            string s2 = s1;
+
+            s1 = "Session 11";
+
+            // string immutable
+
+            //StringBuilder sb = new StringBuilder();
+
+            Console.WriteLine($"s1 = {s1} s2 = {s2}");
+
 
             Console.ReadKey();
 
+            int[] numbers1 = new int[3];
+            numbers1[0] = 10;
+            numbers1[1] = 20;
+            numbers1[2] = 30;
+
+            // 
+            int[] numbersCopy2 = numbers1;
+
+            foreach (var item in numbersCopy2)
+            {
+                Console.WriteLine(item);
+            }
+
+            numbers1[1] = 2000;
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            foreach (var item in numbersCopy2)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadKey();
+
+            //Console.Clear();
+
+            int[] myArray = new int[3];
+            myArray[0] = 10;
+            myArray[1] = 20;
+            myArray[2] = 30;
+
+            // int[] result = MyClass.ChangeArray(myArray);
+            CSProjects_Part01.Classes.ArrayCalculate.ChangeArray(myArray);
+
+            foreach (var item in myArray)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadKey();
+            #endregion
+
+            #region Part12
+            a = 100;
+
+            Classes.MethodCalls.DoSomething(a);
+
+            Console.WriteLine($"after method value = {a}");
+
+            Classes.MethodCalls.DoSomething(ref a);
+
+            Console.WriteLine($"after method value = {a}");
+
+            int myOutVar = 12345;
+            Classes.MethodCalls.DoSomething2(out myOutVar);
+
+            int x1, x2;
+            // Console.WriteLine($"x1 = {x1} , x2 = {x2}");
+            Classes.MethodCalls.DoSomething2(out x1, out x2);
+            Console.WriteLine($"x1 = {x1} , x2 = {x2}");
+
+            //--------------------------------------------------
+
+            int[] array = new int[] { 1, 2, 34, 5, 67, 8, 9, 10 };
+
+            Classes.MethodCalls.ShowArrayValues(array);
+
+            Classes.MethodCalls.ShowNumbers(array);
+
+            Classes.MethodCalls.ShowNumbers(1, 2, 3, 4, 5);
+
+            Classes.MethodCalls.ShowNumbers(10, 20, 30, 40);
+
+            Classes.MethodCalls.ShowNumbers(100, 200, 300);
+
+            Classes.MethodCalls.ShowNumbers(100, 200);
+
+            Classes.MethodCalls.ShowNumbers(100, 200, 300, 54, 54, 54, 543, 5, 435, 43, 5, 435, 435, 55);
+
+
+            //----------------------------------------
+
+            int res;
+            int.TryParse("12234", out res);
+
+            Console.ReadKey(); 
+            #endregion
+
+            #region Part13
+            #region [ 2D ]
+
+            int[,] my2DArray = new int[2, 3];
+
+            int[,] my2DArray2 = new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+
+            int[,] my2DArray4 = new int[4, 3] { { 10, 20, 30 }, { 3, 4, 3 }, { 5, 6, 3 }, { 7, 8, 3 } };
+
+            int[,] my2DArray3 = { { 1, 2, 3 }, { 4, 5, 6 } };
+
+            #endregion
+
+            #region [ jadvalZarb ]
+
+            int[,] jadvalZarb = new int[10, 10];
+
+            // به ازای هر بار اجرای حلقه بیرونی ، حلقه درونی کامل اجرا میشود
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    jadvalZarb[i, j] = (i + 1) * (j + 1); // 10 * 10 بار اجرا میشود
+                }
+            }
+
+            #endregion
+
+            #region [ 3D ]
+
+            int[,,] my3DArray = new int[2, 3, 4]; // 24
+
+            int length = my3DArray.Length; //24
+
+            int total = 1;
+
+            for (int i = 0; i < my3DArray.Rank; i++)
+            {
+                total *= my3DArray.GetLength(i); //24
+                Console.WriteLine($"the Rank : {total}");
+            }
+
+            Console.WriteLine("{0} = {1}", length, total);
+
+
+            int[,,,,] my5DArray = new int[2, 3, 4, 3, 2]; // 144
+
+
+            //--------- Reset
+
+            length = my5DArray.Length;
+            total = 1;
+
+            for (int i = 0; i < my5DArray.Rank; i++)
+            {
+                total *= my5DArray.GetLength(i); // 144
+            }
+
+            Console.WriteLine("{0} = {1}", length, total);
+
+
+
+            #endregion
+
+
+            #region [Jagged Arrays]
+
+            // Array of Arrays !! Jagged Arrays !!
+
+            int[][] myJaggedArray = new int[3][];
+
+            myJaggedArray[0] = new int[4] { 1, 2, 3, 4 };
+            myJaggedArray[1] = new int[3] { 1, 2, 3 };
+            myJaggedArray[2] = new int[2] { 1, 2 };
+            //  myJaggedArray[3] = new int[1] { 1 };
+
+
+
+
+            int[][] myJaggedArray2 = new int[][]
+            {
+                new int[] {1,2,3,4,5},
+                new int[] {1,2,3},
+                new int[] {1,2}
+            };
+
+            //  myJaggedArray2[2][2] = 2222; // index out of renge
+
+
+            int[][] myJaggedArray3 = new int[][]
+           {
+                //new string[] {"",""},
+                new int[] {1,2,3},
+                new int[] {1,2}
+           };
+
+
+            #endregion
+
+            Console.ReadKey();
+            #endregion
+
+            #region Part14
+            // Array arr = new Array(); // Dont Try !
+
+            numbers = new int[] { 109, 221, 30, 4, 50, 6, 7, 8, 9, 10, 0, -1, -2, -3, -4, 20 };
+
+            //// best practice for sorting
+
+            //Array.Sort(numbers);
+
+            //1-Console.WriteLine(Array.Sort(numbers));
+            //2- var result = Array.Sort(numbers);
+            //Console.WriteLine(result);
+            //3- foreach (var item in numbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Console.ForegroundColor = ConsoleColor.Green;
+
+            //Array.Reverse(numbers);
+
+            //foreach (var item in numbers)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            //int[] result = Array.FindAll(numbers, n => n.CompareTo(20) > 0);
+
+            //int[] result2 = Array.FindAll(numbers, x => x > 5);
+
+            //int result3 = Array.Find(numbers, x => x > 5);
+
+
+            //Console.ResetColor();
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //ArrayList al = new ArrayList();
+            //al.Add(123);
+            //al.Add("123");
+            //al.Add("123ABC");
+            //al.Add("ABC123");
+            //al.Add(12.3);
+            //al.Add(12.3F);
+            //al.Add(true);
+            //al.Add('X');
+
+            //System.Collections.ArrayList al = new ArrayList
+            //{
+            //    123,
+            //    "123",
+            //    "123ABC",
+            //    "ABC123",
+            //    12.3,
+            //    12.3F,
+            //    true,
+            //    'X'
+            //};
+
+            //foreach (object item in al)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            //foreach (var item in al)
+            //{
+            //    if (item.GetType() == typeof(string))
+            //    {
+            //        Console.WriteLine(item);
+            //    }
+
+            //    if (item.GetType() == typeof(int))
+            //    {
+            //        Console.WriteLine(item);
+            //    }
+
+            //    if (item.GetType() == typeof(bool))
+            //    {
+            //        Console.WriteLine(item);
+            //    }
+            //}
+
+
+            //int[] myArray = new int[] { 200, 201, 202, 203, 204, 205 };
+
+            //System.Collections.Generic.List<int> numbers = new List<int>();
+            //numbers.Add(1);
+            //numbers.Add(12);
+            //numbers.Add(123);
+            //numbers.Add(1234);
+            //numbers.Add(12345);
+
+            //numbers.AddRange(myArray);
+
+            //numbers.Add(1000);
+
+            //numbers.Insert(index: 0, item: 0);
+
+            //numbers.RemoveAll(match: x => x > 0);
+
+            //numbers.RemoveAt(index: 0);
+
+            //numbers.Remove(item: 123);
+
+            //numbers[6] = 666;
+
+            //foreach (var item in numbers)
+            //{
+            //    Console.WriteLine(value: item);
+            //}
+
+
+            Console.ReadKey(); 
+            #endregion
+
+            #region Part15
+            alan = DateTime.Now;
+
+            Console.WriteLine(alan.ToString("yyyy-MM-dd"));
+            Console.WriteLine(alan.ToString("yyyy-mm-dd")); // دقیقه
+
+
+            List<string> names = new List<string>()
+            {
+                "AAA", "BBB","CCC","ABC","abc","abd","ABCD","CBA","ABCdE","ABCDEF G"
+            };
+
+            foreach (var item in names)
+            {
+                Console.WriteLine(item);
+            }
+
+
+            foreach (var item in names)
+            {
+                if (item.Contains("D"))
+                {
+                    Console.WriteLine(item);
+                }
+
+                if (item.ToUpper().Contains("D"))
+                {
+                    Console.WriteLine(item);
+                }
+
+                if (item.ToLower().Contains("d"))
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+
+            var result = names.FindAll(n => n.ToUpper().StartsWith("A"));
+
+            var result2 = names.FindAll(n => n.ToUpper().EndsWith("A"));
+
+            var result3 = names.FindAll(n => n.Length > 3);
+
+            var result4 = names.FindAll(n => n.Length > 3 && n.ToLower().Contains("e"));
+
+            var result5 = names.FindAll(n => n.Length > 3 || n.ToLower().Contains("e"));
+
+            var result6 = names.FindAll(n => n.Contains(" "));
+
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+
+
+            name = "Soroush Sadr";
+            char[] arrayResult = name.ToCharArray();
+            foreach (char item in arrayResult)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadKey(); 
+            #endregion
         }
         static void ShowMessage(string msg)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"Your Message  = {msg}");
+            Console.WriteLine($"Your Name: {msg}");
         }
     }
 
