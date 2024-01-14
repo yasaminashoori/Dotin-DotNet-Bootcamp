@@ -5,7 +5,7 @@ namespace CSProjects_Part01
 {
     internal class Program
     {
-        //part2
+        #region EnumClasses
         /// <summary>
         /// یک نوع داده ای جدید برای روز های هفته
         /// </summary>
@@ -52,10 +52,11 @@ namespace CSProjects_Part01
             FogheLisans,
             PhD = 1003
         }
+        #endregion
 
         static void Main(string[] args)
         {
-         
+
             #region Part1
             Console.WriteLine("Hello World");
             int a;
@@ -89,15 +90,18 @@ namespace CSProjects_Part01
 
             DateTime alan = new DateTime();
 
-            Console.WriteLine(alan); // 1/1/0001 12:00:00 AM
+            // returns: 1/1/0001 12:00:00 AM
+            Console.WriteLine(alan);
 
-            Console.WriteLine(alan.ToString()); // 1/1/0001 12:00:00 AM
+            // returns: 1/1/0001 12:00:00 AM
+            Console.WriteLine(alan.ToString());
 
             alan = DateTime.Now;
 
             Console.WriteLine(alan.ToLongDateString());
 
-            DateTime myBirthdate = new DateTime(1984, 01, 31); // 1362/11/11
+            // returns: 1362/11/11
+            DateTime myBirthdate = new DateTime(1984, 01, 31);
 
             PersianCalendar pc = new PersianCalendar();
 
@@ -109,7 +113,7 @@ namespace CSProjects_Part01
 
             Console.ForegroundColor = ConsoleColor.Green;
 
-            Console.WriteLine($"{year}/{month}/{day}"); 
+            Console.WriteLine($"{year}/{month}/{day}");
             #endregion
 
             #region Part3
@@ -153,9 +157,10 @@ namespace CSProjects_Part01
             //int.TryParse(Console.ReadLine(), out age);
             //Console.WriteLine($"Age = {age}");
 
-            age = 1234;
+            age = 1234; // or age;
             bool isConvertedCorrectly = int.TryParse(Console.ReadLine(), out age);
 
+            // inline declaration: int age2 and out age2 => out int age 2
             bool isConvertedCorrectly2 = int.TryParse(Console.ReadLine(), out int age2);
 
 
@@ -253,6 +258,7 @@ namespace CSProjects_Part01
                     break;
             }
 
+            // shortcut for writing automated: switch (2 tab) + madrak + arrow key 
             switch (madrak)
             {
                 case EducationType.Diplom:
@@ -283,6 +289,389 @@ namespace CSProjects_Part01
 
             #endregion
 
+            #region Part5
+            // for 
+
+            //  int i = 100;
+
+            for (int i = 0; i <= 10; i++)
+                Console.WriteLine(i);
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i);
+                Console.WriteLine("----");
+            }
+
+
+            Console.Clear();
+
+            //  Console.ResetColor();
+
+
+            int j = 0;
+
+            for (j = 0; j < 10; j++)
+            {
+                // Do Something.....
+            }
+            Console.WriteLine("j = " + j);
+
+
+            for (int i = 0; i <= 10; i++) ;
+            //Console.WriteLine(i);
+
+
+            int k = 0;
+            for (k = 0; k <= 10; k++) ;
+            Console.WriteLine("k = " + k);
+            Console.WriteLine(DateTime.Now.ToLongDateString());
+
+            Console.Clear();
+
+
+            //for (int i = 0; i < 10; i--)
+            //{
+            //    System.Threading.Thread.Sleep(100);
+            //    Console.WriteLine(DateTime.Now.ToLongTimeString());
+            //}
+
+
+            //  for (;;){}
+
+            //  for (int i = 0; ; i++) { Console.WriteLine(i); }
+
+            // for (int i = 0; ;) { Console.WriteLine(i); }
+
+
+            Console.ReadKey();
+            #endregion
+
+            #region Part6
+
+            #region [ for - ASCII Code ]
+
+            for (int i = 1; i <= 57; i++)
+            {
+                Console.WriteLine($"Code = {i}\tChar = {(char)i}");
+            }
+
+            for (int i = 65; i <= 122; i++)
+            {
+                Console.WriteLine($"Code = {i}\tChar = {(char)i}");
+            }
+
+
+            #endregion
+
+            //Console.Clear();
+
+            #region [ While - DoWhile ]
+            int j = 0;
+            while (j <= 10)
+            {
+                Console.WriteLine($"J = {j}");
+                // j++;
+                j += 2;
+            }
+
+
+            //-----------------------
+
+            int k = 20;
+            do
+            {
+                Console.WriteLine($"K = {k}");
+
+            } while (k <= 10);
+            #endregion
+
+            //Console.Clear();
+
+            #region [ Classic Array ]
+            // Array آرایه ها 
+
+            // Fixed Size
+            // Reference Type
+            // 0 based index
+
+
+
+            int[] numbers = new int[3];
+
+            numbers[0] = 100;
+            numbers[1] = 200;
+            numbers[2] = 300;
+
+
+            Console.WriteLine(numbers);
+
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                // محتوای خونه آی ام 
+                //Console.WriteLine(numbers[i]);
+
+                Console.WriteLine($"{i + 1} : {numbers[i]}"); // OK
+
+                //Console.WriteLine($"{i++} : {numbers[i]}"); // ERROR
+
+            }
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            foreach (int item in numbers) // should be converted
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ForegroundColor = ConsoleColor.Red;
+
+
+            foreach (var item in numbers) // for all of the types
+            {
+                Console.Write("The items are: ");
+                Console.WriteLine(item);
+            }
+            #endregion
+
+            Console.ReadKey();
+            #endregion
+
+            #region Part7
+
+            // the numbers amy be the same 
+            Random rand1 = new Random();
+            int random = rand1.Next();
+            Console.WriteLine(random);
+
+            random = rand1.Next(100);
+            Console.WriteLine(random);
+
+            random = rand1.Next(200, 300);
+            Console.WriteLine(random);
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            var rand2 = new Random();
+            Console.WriteLine(rand2.Next());
+            Console.WriteLine(rand2.Next());
+            Console.WriteLine(rand2.Next());
+            Console.WriteLine(rand2.Next());
+
+            //System.Threading.Thread.Sleep(100);
+
+            Console.WriteLine(rand2.Next());
+            Console.WriteLine(rand2.Next());
+            Console.WriteLine(rand2.Next());
+            Console.WriteLine(rand2.Next());
+
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            Console.WriteLine(new Random(1234).Next());
+
+            //--------------------------------------
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            Guid myRandom = new Guid();
+            myRandom = Guid.NewGuid();
+
+            Console.WriteLine(myRandom);
+
+            Console.WriteLine(Guid.NewGuid());
+            Console.WriteLine(Guid.NewGuid());
+            Console.WriteLine(Guid.NewGuid());
+            Console.WriteLine(Guid.NewGuid());
+            Console.WriteLine(Guid.NewGuid());
+            Console.WriteLine(Guid.NewGuid());
+
+            Console.WriteLine(myRandom.ToString().Replace('-', '@')); //char
+            Console.WriteLine(myRandom.ToString().Replace("-", "STRING")); //string
+            Console.WriteLine(myRandom.ToString().Replace("-", "").Substring(10, 10));
+
+
+            if (myRandom == Guid.Empty)
+            {
+
+            }
+
+            Console.WriteLine(Guid.Empty);
+
+            Console.ReadKey();
+            #endregion
+
+            #region Part8
+            #region [ 1 ]
+            Random rand = new Random();
+            int computerRandom = rand.Next(100);
+
+            while (true)
+            {
+                Console.ResetColor();
+                Console.Write("Plz Enter Your Guess !! : ");
+                int userGuess = int.Parse(Console.ReadLine());
+
+                if (userGuess == computerRandom)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("OK :-) You are Right !! ");
+                    break;
+                }
+
+                else if (computerRandom < userGuess)
+                {
+
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(" Your Number Should be lower ... !  ");
+
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(" Your Number Should be greater ... !  ");
+                }
+            }
+
+            Console.WriteLine("Good Job ! Bye Bye :-)");
+            #endregion
+
+            #region [ 2 ]
+            //Random rand = new Random();
+            //int computerRandom = rand.Next(100);
+
+            //Boolean isContinue = true;
+
+            //while (isContinue)
+            //{
+            //    Console.ResetColor();
+            //    Console.Write("Plz Enter Your Guess !! : ");
+            //    int userGuess = int.Parse(Console.ReadLine());
+
+            //    if (userGuess == computerRandom)
+            //    {
+            //        Console.ForegroundColor = ConsoleColor.Green;
+            //        Console.WriteLine("OK :-) You are Right !! ");
+            //        isContinue = false;
+            //        continue;
+            //    }
+
+            //    else if (computerRandom < userGuess)
+            //    {
+
+            //        Console.ForegroundColor = ConsoleColor.Red;
+            //        Console.WriteLine(" Your Number Should be lower ... !  ");
+
+            //    }
+            //    else
+            //    {
+            //        Console.ForegroundColor = ConsoleColor.Red;
+            //        Console.WriteLine(" Your Number Should be greater ... !  ");
+            //    }
+            //}
+
+            //Console.WriteLine("Good Job ! Bye Bye :-) :-)"); 
+            #endregion
+            #endregion
+
+            #region Part9
+            #region [ 1 ]
+            //int[] numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            //int sum = 0; //حتمن مقدار اولیه 0 میخواهد
+            //float average = 0;
+
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    sum += numbers[i];// sum = sum + numbers[i];
+            //}
+
+            //// 5/2 = 2 !!!!!!!!!!!!!!!!!!!!!!!!
+            ////  average = sum / numbers.Length; //تقسیم بصورت عدد صحیح
+
+
+            ////5/2 = 2.5 :-)
+            //average = (float)sum / numbers.Length; // تقسیم بصورت عدد اعشاری
+
+            ////-------------اشتباه---------
+            //// average = (float)(sum / numbers.Length); // تقسیم بصورت عدد صحیح
+            ////----------------------
+
+            //// به صورت خیلی شفاف----------------------
+            //float myFloatVersionOfSum = (float)sum;
+            //average = myFloatVersionOfSum / numbers.Length;
+            ////------------------------------------------
+
+            //string myFormat = "The Sum of {0} Numbers = {1}\nThe Average of {0} Numbers = {2}";
+
+            //Console.WriteLine(myFormat, numbers.Length, sum, average);
+            #endregion
+
+            #region [ 2 ]
+            //int sum = 0;
+            //float average = 0;
+            //Console.WriteLine("You Should Enter 10 Numbers : ");
+
+            //int[] numbers = new int[10];
+
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    Console.Write("Plz Enter Number {0} : ", i + 1);
+            //    numbers[i] = int.Parse(Console.ReadLine());
+            //}
+
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    sum += numbers[i];
+            //}
+
+            //average = (float)sum / numbers.Length;
+
+            //string myFormat = "The Sum of {0} Numbers = {1}\nThe Average of {0} Numbers = {2}";
+
+            //Console.WriteLine(myFormat, numbers.Length, sum, average);
+            #endregion
+
+            #region [ 3 ]
+            const int SIZE = 10;
+            int sum = 0;
+            float average = 0;
+
+            // SIZE = 4; //The left-hand side of an assignment must be a variable, property or indexer 
+            // SIZE++; //The operand of an increment or decrement operator must be a variable, property or indexer   
+
+
+
+            Console.WriteLine("You Should Enter {0} Numbers : ", SIZE);
+
+            int[] numbers = new int[SIZE];
+
+            for (int i = 0; i < SIZE; i++)
+            {
+                if (i == SIZE - 1)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                }
+                Console.Write("Plz Enter Number {0} : ", i + 1);
+                numbers[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            for (int i = 0; i < SIZE; i++)
+            {
+                sum += numbers[i];
+            }
+
+            average = (float)sum / SIZE;
+
+            Console.WriteLine($"The Sum of {SIZE} Numbers = {sum}\nThe Average of {SIZE} Numbers = {average}");
+            #endregion
+
+            Console.ReadKey();
+            #endregion
+
+            #region Enum.Random,GUID_Practices
             //System.Globalization.ThaiBuddhistCalendar
             DateTime alan2 = new DateTime();
             DateTime birthDate2 = new DateTime(1989, 8, 3);
@@ -296,14 +685,65 @@ namespace CSProjects_Part01
             Console.WriteLine(alan2);
 
             Console.ForegroundColor = ConsoleColor.Blue;
-
             Guid randomGUI = Guid.NewGuid();
             Console.WriteLine(randomGUI);
             Guid randomGUID2 = new Guid();
             randomGUID2 = Guid.NewGuid();
             Console.WriteLine(randomGUID2);
+            Console.ReadKey();
+            #endregion
+
+            // METHOD 
+
+            // BLACK BOX
+            // DRY
+            // RE USABILITY
+            // TEAM WORK 
+            // TEST 
+            // یک کار انجام دهد درست انجام دهد و از اسم متد مشخص شود
+            // ACTION ==> NAMING CONVENTION 
+            // SINGLE RESPONSIBILITY 
+
+            // IN , OUT (توصیه میکنم)
+            // -  , OUT
+            // IN , -
+            // -  , - ==> به احتمال زیاد متغیر سراسری دارد
+
+
+            // NAMING CONVENTION : PASCAL CASE 
+
+            // تا اطلاع ثانوی
+            // همه متد های ما در کلاس هایی از نوع استاتیک قرار میگیرند
+
+            // کلاس استاتیک
+            // محلی برای نگه داری متد های استاتیک و از یک خانواده
+
+            // آیا یک متد میتواند بیشتر از یک مقدار خروجی داشته باشد؟
+
+
+            Console.Write("Plz Enter Your Message : ");
+            string input = Console.ReadLine();
+            ShowMessage(input);
+
+            // فراخوانی متد
+            // صدا کردن متد
+            // Call / Invoke
+            CSProjects_Part01.Classes.Greeting();
+
+            int javab = MySimpleMathClass.DoSum(12, 20);
+
+            Console.WriteLine($"Javab = {javab}");
+
+            float sum = MySimpleMathClass.DoSum(12.3F, 12);
 
             Console.ReadKey();
+
+        }
+        static void ShowMessage(string msg)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Your Message  = {msg}");
         }
     }
+
 }
