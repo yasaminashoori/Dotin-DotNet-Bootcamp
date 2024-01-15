@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    color: #eee;
+    background-color: #222;
+}
+
+/* LAYOUT */
+header {
+    position: relative;
+    height: 35vh;
+    border-bottom: 7px solid #eee;
+}
+
+main {
+    height: 65vh;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.left {
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -30rem;
+}
+
+.right {
+    width: 80rem;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: -20rem;
+}
+
+.align-right{
+    display: block;
+    text-align: center;
+}
+
+
+/* ELEMENTS STYLE */
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    position: absolute;
+    left: 30rem;
+    top: -30rem;
+    white-space: nowrap;
+}
+
+.number {
+    background: #eee;
+    color: #333;
+    font-size: 6rem;
+    width: 15rem;
+    padding: 3rem 0rem;
+    text-align: center;
+    position: absolute;
+    top: -10rem; /* Adjust top position */
+    left: 50rem;
+    transform: translate(0%, -50%);
+}
+
+.between {
+    font-size: 1.4rem;
+    position: absolute;
+    top: -35rem;
+    right: -140rem;
+}
+
+.again {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 58rem;
+    left: -20rem;
+}
+
+
+.guess {
+    background: none;
+    border: 4px solid #eee;
+    font-family: inherit;
+    color: inherit;
+    font-size: 2rem;
+    padding: 1.5rem;
+    width: 15rem;
+    text-align: center;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    border: none;
+    background-color: #eee;
+    color: #222;
+    font-size: 2rem;
+    font-family: inherit;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+    .btn:hover {
+        background-color: #ccc;
+    }
+
+.message {
+    margin-bottom: 4rem;
+    font-size: 2rem;
+}
+
+.label-score {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-left: -6rem;
+}
