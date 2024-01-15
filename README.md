@@ -6,7 +6,7 @@
 - <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators">Bitwise MDN</a>
 
 2. My Practice
-- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/MVCExamples">Guess NUmbe MVC with playing song 🎲🎵</a>
+- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/MVCExamples">Guess Number MVC with playing song 🎲🎵</a>
 
 ![GuessNUmber](https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/assets/96047848/999f21e9-a1d4-409f-ac0c-c83ef41964d5)
 
