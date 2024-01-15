@@ -1,5 +1,7 @@
 # Dotin_DotNet_Bootcamp
 
+### ✨This is my project and practice for Dotin Bootcamp 1402.
+
 1. Mr.Sadr Resources and refer links:
 - <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators">Bitwise MDN</a>
 
