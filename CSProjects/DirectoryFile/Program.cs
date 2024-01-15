@@ -31,7 +31,7 @@ namespace DirectoryFiles
                 System.Threading.Thread.Sleep(1000);
             }
 
-            var sortedFiles = from file in filesList orderby file.Length select file);
+            var sortedFiles = from file in filesList orderby file.Length select file;
 
             Console.ForegroundColor = ConsoleColor.DarkCyan;
 

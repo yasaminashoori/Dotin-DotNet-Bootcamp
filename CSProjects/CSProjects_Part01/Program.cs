@@ -851,7 +851,7 @@ namespace CSProjects_Part01
             int res;
             int.TryParse("12234", out res);
 
-            Console.ReadKey(); 
+            Console.ReadKey();
             #endregion
 
             #region Part13
@@ -875,9 +875,9 @@ namespace CSProjects_Part01
 
             for (int i = 0; i < 10; i++)
             {
-                for (int j = 0; j < 10; j++)
+                for (int j1 = 0; j1 < 10; j1++)
                 {
-                    jadvalZarb[i, j] = (i + 1) * (j + 1); // 10 * 10 بار اجرا میشود
+                    jadvalZarb[i, j1] = (i + 1) * (j1 + 1); // 10 * 10 بار اجرا میشود
                 }
             }
 
@@ -1074,7 +1074,7 @@ namespace CSProjects_Part01
             //}
 
 
-            Console.ReadKey(); 
+            Console.ReadKey();
             #endregion
 
             #region Part15
@@ -1139,7 +1139,7 @@ namespace CSProjects_Part01
                 Console.WriteLine(item);
             }
 
-            Console.ReadKey(); 
+            Console.ReadKey();
             #endregion
         }
         static void ShowMessage(string msg)
