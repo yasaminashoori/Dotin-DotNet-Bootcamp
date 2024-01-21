@@ -6,11 +6,11 @@
 - <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators">Bitwise MDN</a>
 
 2. My Practice
-- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/MVCExamples">Guess Number MVC with playing song 🎲🎵</a>
+- 2.1-<a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/MVCExamples">Guess Number MVC with playing song 🎲🎵</a>
 
 ![GuessNUmber](https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/assets/96047848/999f21e9-a1d4-409f-ac0c-c83ef41964d5)
 
-- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/SeparatorPractice">Separator Practice ⚙️</a>
+- 2.2- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/SeparatorPractice">Separator Practice ⚙️</a>
 
 Output:
 ```
@@ -21,7 +21,7 @@ The average age of females for mona: 54
 The average age for males ali, reza: 43
 ```
 
-- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/AbbreviationShowName">Abbreviation Name and get the user's time for welcome</a>
+- 2.3- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/AbbreviationShowName">Abbreviation Name and get the user's time for welcome</a>
 
 Output:
 ```
@@ -31,7 +31,7 @@ Welcome Y.A
 It's 17 PM yas Good Afternoon :D
 ```
 
-- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/TimeSpan">Time Span with OOP ⏳</a>
+- 2.4- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/TimeSpan">Time Span with OOP ⏳</a>
 
 Output:
 ```
