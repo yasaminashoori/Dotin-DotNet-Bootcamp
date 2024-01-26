@@ -1,0 +1,19 @@
+﻿@using Entities.ModelBinding.Advance
+@model Phone
+
+<fieldset class="border p-2 m-2">
+    <div class="form-group">
+        <label for="Phones">شماره تلفن :</label>
+        <input id="Phones"
+               name="Phones"
+               class="form-control"
+               value="@Model" />
+    </div>
+</fieldset>
+
+<div class="form-group">
+    <label asp-for="PhoneType"></label>
+    <select asp-for="PhoneType" class="form-control"
+            asp-items="@ViewBag.PhoneType">
+    </select>
+</div>
