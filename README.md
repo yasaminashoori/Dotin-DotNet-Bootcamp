@@ -145,3 +145,6 @@ PersonController:
 
 ###  🖊️📝 Articles Written by me for Dotin tasks or more information
 
+1. <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/blob/master/Articles/IActionResult.pdf">IActionResult</a>
+
+2. <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/blob/master/Articles/ViewBag_ViewData_TempData.pdf">ViewBag ViewData TempData</a>
