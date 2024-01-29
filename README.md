@@ -6,11 +6,12 @@
 - <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators">Bitwise MDN</a>
 
 2. My Practice
-- 2.1-<a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/MVCExamples">Guess Number MVC with playing song 🎲🎵</a>
+   
+### 2.1-<a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/MVCExamples">Guess Number MVC with playing song 🎲🎵</a>
 
 ![GuessNUmber](https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/assets/96047848/999f21e9-a1d4-409f-ac0c-c83ef41964d5)
 
-- 2.2- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/SeparatorPractice">Separator Practice ⚙️</a>
+### 2.2- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/SeparatorPractice">Separator Practice ⚙️</a>
 
 Output:
 ```
@@ -21,7 +22,7 @@ The average age of females for mona: 54
 The average age for males ali, reza: 43
 ```
 
-- 2.3- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/AbbreviationShowName">Abbreviation Name and get the user's time for welcome</a>
+### 2.3- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/AbbreviationShowName">Abbreviation Name and get the user's time for welcome</a>
 
 Output:
 ```
@@ -31,7 +32,7 @@ Welcome Y.A
 It's 17 PM yas Good Afternoon :D
 ```
 
-- 2.4- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/TimeSpan">Time Span with OOP ⏳</a>
+### 2.4- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/TimeSpan">Time Span with OOP ⏳</a>
 
 Output:
 ```
@@ -40,7 +41,7 @@ Yasamin Ashoori
 The difference of the user BirthDate is: 35 Days.
 
 ```
-- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/Dotin_C%23_Projects/TimeSpan_Example">Time Span usage as Counter</a>
+### 2-5- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/Dotin_C%23_Projects/TimeSpan_Example">Time Span usage as Counter</a>
 
 Output:
 
@@ -60,7 +61,7 @@ Time remaining: 00:01
 Countdown complete!
 ```
 
-- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/DirectoryFile">Directory File 📄</a>
+### 2.6- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/DirectoryFile">Directory File 📄</a>
 
 Output:
 
@@ -93,6 +94,47 @@ The counted items are: MehranUpdateSP.sql
 The Hidden items: C:\Users\Yasi\Desktop\gitFile\1.csv
 The Hidden items: C:\Users\Yasi\Desktop\gitFile\1500x500.jpg
 ```
+
+### 2.7- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/DirectoryFile">MVC Session 10: Table of Products📄</a>
+
+![Screenshot 2024-01-28 213827](https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/assets/96047848/d36bae98-8174-46a0-b10e-3d98c32c575f)
+
+Index3:
+
+```
+@model List<SampleData.Shopping.GetProducts>
+<div>
+    <h1 class="display-4">Products page 3</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            { 
+                <tr>
+                    <td class="bg-info">@product.Title</td>
+                    <td class="bg-danger">@product.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+```
+PersonController:
+
+```
+ public IActionResult Index3()
+ {
+     var products = SampleData.Shopping.GetProducts();
+     return View(products);
+ }
+
+```
+
 - <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/CSProjects_Part01">Session1 Practice</a>
 - <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/CSProjects_Part02">Session2 Practice</a>
 - <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/CSProjects_Part03">Session3 Practice</a>
