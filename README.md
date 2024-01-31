@@ -139,6 +139,14 @@ PersonController:
 - <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/CSProjects_Part02">Session2 Practice</a>
 - <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/CSProjects_Part03">Session3 Practice</a>
 
+### 2.8- <a href="">Practice with Query Strings in URLs</a>
+
 ### ⌛📋 The Questions and Answers of C# Quiz:
 
 - <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/C%23_Quiz">C# Quiz</a>
+
+###  🖊️📝 Articles Written by me for Dotin tasks or more information
+
+1. <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/blob/master/Articles/IActionResult.pdf">IActionResult</a>
+
+2. <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/blob/master/Articles/ViewBag_ViewData_TempData.pdf">ViewBag ViewData TempData</a>
