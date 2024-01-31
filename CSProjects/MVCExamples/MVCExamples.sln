@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCExamples_GuessNumber", "MVCExamples_GuessNumber\MVCExamples_GuessNumber.csproj", "{C2C8C2C3-4C9E-4D3B-A2CF-F58C3E510A47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_Session11", "MVC_Session11\MVC_Session11.csproj", "{531BD616-50AD-429F-8481-85C2079CE467}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC_Session11", "MVC_Session11\MVC_Session11.csproj", "{531BD616-50AD-429F-8481-85C2079CE467}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

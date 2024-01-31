@@ -1,111 +1,34 @@
-﻿using Entities;
+﻿// PersonController.cs
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using MVCExamples.Part01.Models;
 
 namespace MVCExamples.Part01.Controllers
 {
-    //public class PersonController : Controller
-    //{
-    //    public IActionResult Index()
-    //    {
-    //        return View();
-    //    }
-    //}
-
-    //public class Person : Controller
-    //{
-    //    public IActionResult Index()
-    //    {
-    //        return View();
-    //    }
-    //}
-
-    //public class PersonController2 : Controller
-    //{
-    //    public IActionResult Index()
-    //    {
-    //        return View();
-    //    }
-    //}
-
-    //public class PersonController //: Controller
-    //{
-    //    //public IActionResult Index()
-    //    //{
-    //    //    return View();
-    //    //}
-
-    //    public string Index()
-    //    {
-    //        return "OK";
-    //    }
-    //}
-
-    //public class PersonController : ControllerBase
-    //{
-    //    public IActionResult Index()
-    //    {
-    //        //return View();
-    //        return Content("Controller Base : Index");
-    //    }
-    //}
-
-    //public class PersonController : Controller
-    //{
-    //    public IActionResult Index()
-    //    {
-    //        return View();
-    //    }
-
-    //    [NonAction]
-    //    public IActionResult MyPrivateIndex()
-    //    {
-    //        return Content(nameof(MyPrivateIndex));
-    //    }
-    //}
-
-
-    //[NonController]
-    //public class PersonController 
-    //{
-    //    public string Index()
-    //    {
-    //        return "index !!";
-    //    }
-    //}
-
-
-    /// <summary>
-    /// Best Practice
-    /// </summary>
     public class PersonController : Controller
     {
-        public IActionResult Index()
+        private List<Person> GetPersons()
         {
-            var person = new Person(1, "سروش", "صدر");
-
-            ViewData[SadrTools.Utility.StaticValues.ViewData.ID] = person.ID;
-            ViewData[SadrTools.Utility.StaticValues.ViewData.FirstName] = person.FirstName;
-            ViewData[SadrTools.Utility.StaticValues.ViewData.LastName] = person.LastName;
-
-
-            ViewData[SadrTools.Utility.StaticValues.ViewData.Person] = person;
+            return new List<Person>
+            {
+                new Person { Id = 1, FirstName = "John", LastName = "Doe" },
+                new Person { Id = 2, FirstName = "Jane", LastName = "Smith" },
+                new Person { Id = 3, FirstName = "Mary", LastName = "Doubra" },
+                new Person { Id = 4, FirstName = "Roz", LastName = "Ocanner" },
 
 
-            return View();
+            };
         }
 
-        public IActionResult Index2()
+        public IActionResult GetAll()
         {
-            Response.ContentType = "text/html; charset=utf-8";
-            var person = new Person(1, "سروش", "صدر");
-            return View(person);
-        }
-
-        public IActionResult Index3()
-        {
-            var products = SampleData.Shopping.GetProducts();
-            return View(products);
+            List<Person> persons = GetPersons();
+            return View(persons);
         }
     }
 }
+
+
+
 
