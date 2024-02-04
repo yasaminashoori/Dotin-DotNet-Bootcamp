@@ -31,8 +31,8 @@ namespace NHExamples.EndPoint2.Mapping
             Property(r => r.CreatedAt, m =>
             {
                 m.Type(NHibernateUtil.DateTime);
-                m.Default("GETDATE()");
-                m.NotNullable(true);
+                Map(x => x.SubmitionDate).Default("getdate()").Not.Nullable();
+                m.NotNullable(true).;
             });
 
             Property(r => r.Note, m =>
