@@ -5,5 +5,6 @@
         public DateTime CreateDateTime { get; set; }
 
         public DateTime UpdateDateTime { get; set; }
+        public byte Code { get; set; }
     }
 }
