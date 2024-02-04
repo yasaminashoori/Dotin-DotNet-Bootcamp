@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+
+	<class name="InstallmentStatus" table="InstallmentStatus" schema="Installment" p1:Guid="03ad1be3-aae4-4d9c-81a0-a88a94210be9">
+		<id name="Code" type="Byte" p1:ValidateRequired="true" p1:Guid="f51ffd46-ef42-41e9-a26b-5bb29b146510">
+			<column name="Code" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</id>
+		<property name="Title" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="d980c2a1-cf04-4493-ac12-61b64ddf69db">
+			<column name="Title" not-null="true" length="50" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<set name="Installment" inverse="true" generic="true" p1:AssociationGuid="b1665f56-b3c0-4271-893d-5e7a88fc7497" p1:Guid="08672e7d-5498-49cd-b296-af4e0339a517">
+			<key>
+				<column name="InstallmentStatusCode" />
+			</key>
+			<one-to-many class="Installment" />
+		</set>
+	</class>
+
+</hibernate-mapping>
+

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+	<class name="Person" table="Person" schema="Person" p1:Guid="75e6bbe1-9898-4471-9e83-20c3b8e136cb">
+		<id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="92369bed-0fcf-49ad-b5cc-19a0c64d1a91">
+			<column name="ID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+			<generator class="identity" />
+		</id>
+		<property name="RoleCode" type="Byte" p1:ValidateRequired="true" p1:Guid="42fa9962-e7db-459d-ab5b-bb2d5183e0bb">
+			<column name="RoleCode" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</property>
+		<property name="FirstName" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="b4cdd986-ea4a-4a98-a1f7-ac194a534443">
+			<column name="FirstName" not-null="true" length="50" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<property name="LastName" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="b25ce933-72e7-4b25-bd71-abbbbcfdf73d">
+			<column name="LastName" not-null="true" length="50" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<property name="BirthDate" type="DateTime" p1:ValidateRequired="true" p1:Guid="2a0aeeed-3090-47f1-93d2-3450209db3e1">
+			<column name="BirthDate" not-null="true" sql-type="date" p1:unicode="false" />
+		</property>
+		<property name="Gender" type="Boolean" p1:ValidateRequired="true" p1:Guid="8d31b411-cc96-408b-b348-68c4a2861071">
+			<column name="Gender" not-null="true" sql-type="bit" p1:unicode="false" />
+		</property>
+		<property name="MobileNumber" type="String" p1:ValidateMaxLength="11" p1:ValidateRequired="true" p1:Guid="39fa8b7e-3fcc-476e-99fe-71524b5d7b96">
+			<column name="MobileNumber" not-null="true" length="11" sql-type="varchar" p1:unicode="false" />
+		</property>
+	</class>
+</hibernate-mapping>

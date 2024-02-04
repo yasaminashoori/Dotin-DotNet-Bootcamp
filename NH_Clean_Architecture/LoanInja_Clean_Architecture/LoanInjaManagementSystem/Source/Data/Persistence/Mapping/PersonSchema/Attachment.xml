@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+	<class name="Attachment" table="Attachment" schema="Person" p1:Guid="800e6e9e-6e18-44a8-96c1-3c854781e695">
+		<id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="a5b3bcb5-eca3-437b-84d3-f7d4337beb0f">
+			<column name="ID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+			<generator class="identity" />
+		</id>
+		<property name="PersonID" type="Int32" p1:ValidateRequired="true" p1:Guid="b2d57c8e-0cb4-4857-9825-4457c39f202b">
+			<column name="PersonID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+		</property>
+		<property name="AttachmentTypeCode" type="Byte" p1:ValidateRequired="true" p1:Guid="29e9a48f-3f9c-4af6-a73f-39a935e23f3b">
+			<column name="AttachmentTypeCode" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</property>
+		<property name="CreatedAt" type="DateTime" p1:ValidateRequired="true" p1:Guid="e8d144b5-1c8f-44fe-a5d0-9d00bf3e9837">
+			<column name="CreatedAt" default="getdate()" not-null="true" sql-type="datetime" p1:unicode="false" />
+		</property>
+		<many-to-one name="Person" class="Person" p1:AssociationGuid="09463283-c8ff-48e9-a4a4-1d99f585cae9" p1:Guid="10ae4691-0d48-4e64-a5a8-1cee5eeee4c8">
+			<column name="PersonID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+		</many-to-one>
+		<many-to-one name="AttachmentType" class="AttachmentType" p1:AssociationGuid="4324ae46-cb90-4c47-9bf4-0ad51ba2af8a" p1:Guid="bec15a0f-bea4-4381-b598-6be1e0dc6e96">
+			<column name="AttachmentTypeCode" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

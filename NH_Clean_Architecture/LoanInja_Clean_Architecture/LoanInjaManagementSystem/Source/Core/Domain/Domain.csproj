@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Concrete\Entities\InstallmentSchema\" />
+    <Folder Include="Concrete\Entities\DboSchema\" />
+    <Folder Include="Contract\Entities\LoanShema\" />
+    <Folder Include="Contract\Entities\InstallmentShema\" />
+    <Folder Include="Contract\Entities\DboSchema\" />
+  </ItemGroup>
+
+</Project>

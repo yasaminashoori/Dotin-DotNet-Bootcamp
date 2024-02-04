@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+	<class name="AttachmentType" table="AttachmentType" schema="Person" p1:Guid="994f2ec0-e115-41e4-bdee-54f95e5e903e">
+		<id name="Code" type="Byte" p1:ValidateRequired="true" p1:Guid="013f0a9f-f1e0-4d19-b0fa-d1058e489bf4">
+			<column name="Code" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+			<generator class="identity" />
+		</id>
+		<property name="TypeName" type="String" p1:ValidateMaxLength="255" p1:ValidateRequired="true" p1:Guid="2a69366a-3cbe-4498-bf03-c3e0088df338">
+			<column name="TypeName" not-null="true" length="255" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<set name="Attachment" inverse="true" generic="true" p1:AssociationGuid="4324ae46-cb90-4c47-9bf4-0ad51ba2af8a" p1:Guid="587abe9c-e8b1-4356-9aef-ff67410634c7">
+			<key>
+				<column name="AttachmentTypeCode" />
+			</key>
+			<one-to-many class="Attachment" />
+		</set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+
+	<class name="Config" table="Config" schema="dbo" p1:Guid="c0b36e3d-35be-424e-9fe0-c54c15fa4808">
+		<id name="Code" type="Byte" p1:ValidateRequired="true" p1:Guid="f0d586a7-2527-4724-9310-9dadeb1ff466">
+			<column name="Code" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+			<generator class="identity" />
+		</id>
+		<property name="InstallmentPenalty" type="Decimal" p1:ValidateRequired="true" p1:Guid="467cc6bc-0b57-4771-a9bc-ddadb366a9e6">
+			<column name="InstallmentPenalty" not-null="true" precision="18" scale="0" sql-type="decimal" p1:unicode="false" />
+		</property>
+	</class>
+	
+
+</hibernate-mapping>
+

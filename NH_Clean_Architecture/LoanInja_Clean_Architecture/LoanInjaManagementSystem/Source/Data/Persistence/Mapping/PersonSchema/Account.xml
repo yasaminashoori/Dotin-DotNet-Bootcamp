@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+
+	<class name="Account" table="Account" schema="Person" p1:Guid="da807877-b418-41cc-8a0a-b55f83215449">
+		<id name="PersonID" type="Int32" p1:ValidateRequired="true" p1:Guid="bfef5426-3042-49cc-a2dc-6e11c7b8bf21">
+			<column name="PersonID" not-null="true" precision="10" scale="0" sql-type="int" unique="true" p1:unicode="false" />
+		</id>
+		<property name="UserName" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="995585d3-ebab-4047-8959-a7d4c9108b5c">
+			<column name="UserName" not-null="true" length="50" sql-type="varchar" p1:unicode="false" />
+		</property>
+		<property name="SSN" type="String" p1:ValidateMaxLength="10" p1:ValidateRequired="true" p1:Guid="e6874acc-efbf-4244-b2e7-23960750eac8">
+			<column name="SSN" not-null="true" length="10" sql-type="varchar" p1:unicode="false" />
+		</property>
+		<property name="CreatedAt" type="DateTime" p1:ValidateRequired="true" p1:Guid="2df739cf-26fa-4314-b12d-401c842cc95b">
+			<column name="CreatedAt" default="getdate()" not-null="true" sql-type="datetime" p1:unicode="false" />
+		</property>
+		<property name="IsActive" type="Boolean" p1:ValidateRequired="true" p1:Guid="d4d81b89-a689-476d-9557-acc98813c33d">
+			<column name="IsActive" default="0" not-null="true" sql-type="bit" p1:unicode="false" />
+		</property>
+		<property name="IsVerified" type="Boolean" p1:ValidateRequired="true" p1:Guid="b1e688ae-fa8a-47f8-853b-156d81ea4cdc">
+			<column name="IsVerified" default="0" not-null="true" sql-type="bit" p1:unicode="false" />
+		</property>
+		<property name="Note" type="String" p1:nullable="true" p1:ValidateMaxLength="255" p1:ValidateRequired="false" p1:Guid="d8958ff5-b496-4e7e-a604-982f929c552c">
+			<column name="Note" not-null="false" length="255" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<one-to-one name="Person" class="Person" constrained="true" p1:AssociationGuid="29d30259-ed03-4f07-b1cf-aff5687e7a6f" p1:Guid="7b5caba5-1e6d-426d-bdd6-36b0ed8293c0" />
+	</class>
+	
+</hibernate-mapping>

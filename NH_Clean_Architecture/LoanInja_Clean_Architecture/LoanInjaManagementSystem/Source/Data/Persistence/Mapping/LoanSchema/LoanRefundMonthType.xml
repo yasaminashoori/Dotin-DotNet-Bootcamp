@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+
+	<class name="LoanRefundMonthType" table="LoanRefundMonthType" schema="Loan" p1:Guid="9d26c570-efd3-4ebf-9749-8aa2a690c615">
+		<id name="Code" type="Byte" p1:ValidateRequired="true" p1:Guid="2099978d-392b-445f-879d-2facd01b252d">
+			<column name="Code" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</id>
+		<property name="MonthType" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="01aedcbd-bc1d-482d-a066-6df317709323">
+			<column name="MonthType" not-null="true" length="50" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<property name="Status" type="String" p1:nullable="true" p1:ValidateMaxLength="50" p1:ValidateRequired="false" p1:Guid="1cfcf5eb-fcd9-4dc8-b134-f7297eb85708">
+			<column name="Status" not-null="false" length="50" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<property name="Comission" type="Decimal" p1:ValidateRequired="true" p1:Guid="593f47c6-3021-4971-8f6e-15c9cf5870c3">
+			<column name="Comission" not-null="true" precision="18" scale="0" sql-type="decimal" p1:unicode="false" />
+		</property>
+		<set name="LoanRequest" inverse="true" generic="true" p1:AssociationGuid="e2956fe0-d533-4534-aef6-86728c074458" p1:Guid="8e79eed6-59d5-4108-8091-566fbc9f939f">
+			<key>
+				<column name="LoanRefundMonthTypeCode" />
+			</key>
+			<one-to-many class="LoanRequest" />
+		</set>
+	</class>
+
+</hibernate-mapping>
+

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+
+	<class name="Message" table="Message" schema="dbo" p1:Guid="32db0f41-4a67-4006-be8a-0e8065b2853d">
+		<id name="Code" type="Byte" p1:ValidateRequired="true" p1:Guid="077e2d0e-523a-4092-8901-27d6c4db17cb">
+			<column name="Code" not-null="true" precision="3" scale="0" sql-type="tinyint" unique="true" p1:unicode="false" />
+			<generator class="identity" />
+		</id>
+		<property name="LoanStatusCode" type="Byte" p1:ValidateRequired="true" p1:Guid="c3bbdbcf-e10b-42a7-9cf3-b670f83197b7">
+			<column name="LoanStatusCode" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</property>
+		<property name="Body" type="String" p1:ValidateRequired="true" p1:Guid="115ed709-22ca-4250-8ded-0f26b6a56f9a">
+			<column name="Body" not-null="true" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<property name="CreatedAt" type="DateTime" p1:ValidateRequired="true" p1:Guid="9b117c1a-228b-4564-99b4-65ec735c8c83">
+			<column name="CreatedAt" default="getdate()" not-null="true" sql-type="date" p1:unicode="false" />
+		</property>
+		<property name="IsVisible" type="Boolean" p1:ValidateRequired="true" p1:Guid="777a7818-50d4-4604-b016-0f62391db0e0">
+			<column name="IsVisible" default="0" not-null="true" sql-type="bit" p1:unicode="false" />
+		</property>
+		<many-to-one name="LoanStatus" class="LoanStatus" p1:AssociationGuid="eeca57da-80b4-4fc0-bfe6-fabfac0000f7" p1:Guid="0e1f978c-0bea-49b7-8daa-6b2baefb4e66">
+			<column name="LoanStatusCode" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
+

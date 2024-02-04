@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+
+	<class name="City" table="City" schema="dbo" p1:Guid="092a9e70-1911-4216-93ea-7bc9e825f638">
+		<id name="Code" type="Byte" p1:ValidateRequired="true" p1:Guid="dfa3d0f4-92d5-4f46-a87c-1cd5ec832f9d">
+			<column name="Code" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</id>
+		<property name="TitleFa" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="765be74f-7843-4247-93af-970ebde83c1a">
+			<column name="TitleFa" not-null="true" length="50" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<property name="TitleEn" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="514ef440-b0bb-40ef-8c7a-3b6eab74c576">
+			<column name="TitleEn" not-null="true" length="50" sql-type="varchar" p1:unicode="false" />
+		</property>
+		<set name="Address" inverse="true" generic="true" p1:AssociationGuid="920175d7-e2ac-4638-9e6e-98ccdcba2218" p1:Guid="4e04f84f-afe8-40cc-a997-704f1fcb4b10">
+			<key>
+				<column name="CityCode" />
+			</key>
+			<one-to-many class="Address" />
+		</set>
+	</class>
+
+</hibernate-mapping>
+

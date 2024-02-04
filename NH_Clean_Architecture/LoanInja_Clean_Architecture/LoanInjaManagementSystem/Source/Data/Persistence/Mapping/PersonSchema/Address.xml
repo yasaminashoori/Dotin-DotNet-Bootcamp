@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+	<class name="Address" table="Address" schema="Person" p1:Guid="05f07df0-95f9-41dd-b263-33a237365113">
+		<id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="6e0773ed-07e8-4268-a10c-fa60e496af10">
+			<column name="ID" not-null="true" precision="10" scale="0" sql-type="int" unique="true" p1:unicode="false" />
+		</id>
+		<property name="CityCode" type="Byte" p1:ValidateRequired="true" p1:Guid="8d377573-a4cb-446e-afa7-28d6942f231a">
+			<column name="CityCode" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</property>
+		<property name="PersonID" type="Int32" p1:ValidateRequired="true" p1:Guid="fb551c15-cee7-44fa-bc62-ec1bbf73957d">
+			<column name="PersonID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+		</property>
+		<property name="MainAddress" type="String" p1:ValidateMaxLength="120" p1:ValidateRequired="true" p1:Guid="eba2d60c-1668-4862-a330-e392c6708307">
+			<column name="MainAddress" not-null="true" length="120" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<property name="PostalCode" type="String" p1:ValidateMaxLength="10" p1:ValidateRequired="true" p1:Guid="1c27521d-22b7-4832-b24b-4478e8b2c526">
+			<column name="PostalCode" not-null="true" length="10" sql-type="varchar" p1:unicode="false" />
+		</property>
+		<many-to-one name="Person" class="Person" p1:AssociationGuid="5dc05eca-cabf-42fb-8580-c113a92cfc4d" p1:Guid="8dd456c7-83ef-4132-bd62-764fd3b9cbe9">
+			<column name="PersonID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+		</many-to-one>
+		<many-to-one name="City" class="City" p1:AssociationGuid="920175d7-e2ac-4638-9e6e-98ccdcba2218" p1:Guid="a98a4e57-ec8d-4aed-8f63-2dc38cf92ecc">
+			<column name="CityCode" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

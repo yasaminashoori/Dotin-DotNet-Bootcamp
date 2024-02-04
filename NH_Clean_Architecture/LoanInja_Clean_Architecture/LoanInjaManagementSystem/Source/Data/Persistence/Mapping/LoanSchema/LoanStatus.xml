@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+	
+	<class name="LoanStatus" table="LoanStatus" schema="Loan" p1:Guid="4e058f73-dd94-4848-a8f8-69cd994a9efe">
+		<id name="Code" type="Byte" p1:ValidateRequired="true" p1:Guid="771b9d7d-7cf5-4cf3-b512-6cfa27d4cc92">
+			<column name="Code" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</id>
+		<property name="TitleFA" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="8d9cec7c-f782-4723-ac79-643ed3cbc27d">
+			<column name="TitleFA" not-null="true" length="50" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<property name="TitleEN" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="d17f45d3-1197-4028-afd5-e95985b8160b">
+			<column name="TitleEN" not-null="true" length="50" sql-type="varchar" p1:unicode="false" />
+		</property>
+		<set name="Message" inverse="true" generic="true" p1:AssociationGuid="eeca57da-80b4-4fc0-bfe6-fabfac0000f7" p1:Guid="8a620fa3-78be-49e5-96f2-2d90f38f1e44">
+			<key>
+				<column name="LoanStatusCode" />
+			</key>
+			<one-to-many class="Message" />
+		</set>
+		<set name="LoanRequest" inverse="true" generic="true" p1:AssociationGuid="2541751f-1739-4ac5-bc2b-7080ba3f5636" p1:Guid="e4b0d1e4-83c5-4190-8d13-0ea030de155b">
+			<key>
+				<column name="LoanRequestStatusCode" />
+			</key>
+			<one-to-many class="LoanRequest" />
+		</set>
+		<set name="LoanTaskInstance" inverse="true" generic="true" p1:AssociationGuid="b6fd0519-2c09-4de9-a278-1c1051b332ab" p1:Guid="a4b7f765-1b9a-4a69-a8b0-943b23261b46">
+			<key>
+				<column name="LoanStatusCode" />
+			</key>
+			<one-to-many class="LoanTaskInstance" />
+		</set>
+	</class>
+
+
+</hibernate-mapping>
+

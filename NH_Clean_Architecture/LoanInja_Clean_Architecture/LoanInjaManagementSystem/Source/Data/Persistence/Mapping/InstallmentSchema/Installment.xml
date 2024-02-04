@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+	
+	<class name="Installment" table="Installment" schema="Installment" p1:Guid="e351a88c-89e2-425c-9fb1-6cca9d9f2707">
+		<id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="6cae5dde-05b9-4bfc-9870-2a7773c84b70">
+			<column name="ID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+			<generator class="identity" />
+		</id>
+		<property name="LoanRequestID" type="Int32" p1:ValidateRequired="true" p1:Guid="9afc192d-2f9e-4cba-8e84-c05daf6f72b9">
+			<column name="LoanRequestID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+		</property>
+		<property name="InstallmentStatusCode" type="Byte" p1:ValidateRequired="true" p1:Guid="948153fd-3601-498d-9fd3-e040ba458dd9">
+			<column name="InstallmentStatusCode" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</property>
+		<property name="InstallmentNumber" type="Int32" p1:ValidateRequired="true" p1:Guid="d531dd09-5121-4d85-a1af-60fd026c5d44">
+			<column name="InstallmentNumber" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+		</property>
+		<property name="InstallmentDate" type="DateTime" p1:ValidateRequired="true" p1:Guid="f28c9555-04e9-4af9-a92b-426abaaa826b">
+			<column name="InstallmentDate" not-null="true" sql-type="date" p1:unicode="false" />
+		</property>
+		<property name="Note" type="String" p1:nullable="true" p1:ValidateRequired="false" p1:Guid="f5c3afef-1f76-4e3e-94c4-3e7f85581d48">
+			<column name="Note" not-null="false" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<many-to-one name="InstallmentStatus" class="InstallmentStatus" p1:AssociationGuid="b1665f56-b3c0-4271-893d-5e7a88fc7497" p1:Guid="f2d4223b-4c91-4a6b-af68-da31e7390971">
+			<column name="InstallmentStatusCode" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</many-to-one>
+		<many-to-one name="LoanRequest" class="LoanRequest" p1:AssociationGuid="df5f854b-7a08-4c5c-a141-1557e7b45b41" p1:Guid="d552cd67-eccc-4b6d-818b-50c032a5631e">
+			<column name="LoanRequestID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+		</many-to-one>
+		<set name="Transaction" inverse="true" generic="true" p1:AssociationGuid="e4b9d9da-43fb-47a1-9ed9-5db02f6dec70" p1:Guid="3fb5c7a3-25bd-473e-82b8-3dfc3beee077">
+			<key>
+				<column name="InstallmentID" />
+			</key>
+			<one-to-many class="Transaction" />
+		</set>
+	</class>
+
+
+</hibernate-mapping>
+

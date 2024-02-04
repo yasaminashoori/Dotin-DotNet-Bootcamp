@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+
+	<class name="LoanInterest" table="LoanInterest" schema="Loan" p1:Guid="d5400686-3c6f-4de0-972a-d8debccda7f6">
+		<id name="Code" type="Byte" p1:ValidateRequired="true" p1:Guid="080048b3-2cad-4b32-87b2-304ee76fa35b">
+			<column name="Code" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</id>
+		<property name="Intrest" type="Decimal" p1:ValidateRequired="true" p1:Guid="eb6e4924-cc98-44d1-bec5-e600f23bb500">
+			<column name="Intrest" not-null="true" precision="18" scale="0" sql-type="decimal" p1:unicode="false" />
+		</property>
+		<property name="CreatedAt" type="DateTime" p1:ValidateRequired="true" p1:Guid="a16f03cf-8b5f-4593-ac9f-c2ff60fee75a">
+			<column name="CreatedAt" default="getdate()" not-null="true" sql-type="date" p1:unicode="false" />
+		</property>
+		<set name="LoanRequest" inverse="true" generic="true" p1:AssociationGuid="d4678545-6094-4f86-b087-f40ae72d2a17" p1:Guid="e68de32c-8967-4822-893b-62aedd756b53">
+			<key>
+				<column name="LoanInterestCode" />
+			</key>
+			<one-to-many class="LoanRequest" />
+		</set>
+	</class>
+	
+
+</hibernate-mapping>
+

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+
+	<class name="Transaction" table="`Transaction`" schema="Installment" p1:Guid="7b4a57e4-7fae-441e-98b0-8563ee4d1a67">
+		<id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="523081a7-8cbe-4994-9b8a-046f2f2a6a65">
+			<column name="ID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+			<generator class="identity" />
+		</id>
+		<property name="InstallmentID" type="Int32" p1:ValidateRequired="true" p1:Guid="6714cdb5-2af1-4ae6-aaeb-4ea3e2052f05">
+			<column name="InstallmentID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+		</property>
+		<property name="Status" type="String" p1:ValidateMaxLength="50" p1:ValidateRequired="true" p1:Guid="875352a3-c3e1-4d17-b30c-ecf35b7b13b0">
+			<column name="Status" not-null="true" length="50" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<property name="CreatedAt" type="DateTime" p1:ValidateRequired="true" p1:Guid="69bd15de-c003-4ead-9faa-5ec48d70fcf1">
+			<column name="CreatedAt" default="getdate()" not-null="true" sql-type="date" p1:unicode="false" />
+		</property>
+		<many-to-one name="Installment" class="Installment" p1:AssociationGuid="e4b9d9da-43fb-47a1-9ed9-5db02f6dec70" p1:Guid="b28abb9d-d8e8-4bf3-9e35-bd51cfff9d37">
+			<column name="InstallmentID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+		</many-to-one>
+	</class>
+	
+
+</hibernate-mapping>
+

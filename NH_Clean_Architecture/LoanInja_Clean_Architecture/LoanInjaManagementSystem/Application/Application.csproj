@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NHibernate" Version="5.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Source\Core\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Source\Data\Persistence\Persistence.csproj" />
+    <ProjectReference Include="..\Source\Presentation\LoanInjaManagementSystem.EndPointAdmin\LoanInjaManagementSystem.EndPointAdmin.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entity\DboShema\" />
+    <Folder Include="Entity\LoanShema\" />
+    <Folder Include="Entity\InstallmentShema\" />
+  </ItemGroup>
+
+</Project>

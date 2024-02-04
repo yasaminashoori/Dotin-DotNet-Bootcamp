@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+
+	<class name="LoanAmount" table="LoanAmount" schema="Loan" p1:Guid="7e9b90b4-b76b-4f1c-a250-8c4dea6944f2">
+		<id name="Code" type="Byte" p1:ValidateRequired="true" p1:Guid="4cb6c1ba-02e0-464a-9769-fc06e53418f1">
+			<column name="Code" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</id>
+		<property name="Amount" type="Decimal" p1:ValidateRequired="true" p1:Guid="f2b961e9-293b-4448-a158-db7f225e56d7">
+			<column name="Amount" not-null="true" precision="18" scale="0" sql-type="decimal" p1:unicode="false" />
+		</property>
+		<set name="LoanRequest" inverse="true" generic="true" p1:AssociationGuid="e1bf6d72-4e78-4325-840e-d60c2d362169" p1:Guid="ffce6488-d908-4688-8cee-6958a381cd9a">
+			<key>
+				<column name="LoanAmountCode" />
+			</key>
+			<one-to-many class="LoanRequest" />
+		</set>
+	</class>
+
+</hibernate-mapping>
+

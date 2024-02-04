@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping p1:Guid="b05de300-20e3-4cd5-9928-fe69032c5025" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0"
+				   xmlns="urn:nhibernate-mapping-2.2"
+				   assembly="Domain"
+				   namespace="Domain.PersonSchema">
+
+	<class name="LoanTaskInstance" table="LoanTaskInstance" schema="Loan" p1:Guid="ac6866dd-d727-4146-81b2-7a0c7b305400">
+		<id name="ID" type="Int32" p1:ValidateRequired="true" p1:Guid="9db1e6ef-c644-4f06-a4ec-75ef45a881d7">
+			<column name="ID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+			<generator class="identity" />
+		</id>
+		<property name="LoanRequestID" type="Int32" p1:ValidateRequired="true" p1:Guid="b22a77aa-48bd-4086-9a52-04edb6609a73">
+			<column name="LoanRequestID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+		</property>
+		<property name="LoanStatusCode" type="Byte" p1:ValidateRequired="true" p1:Guid="7f158dc7-7a6b-4d12-9669-f8a1a0f1f4f0">
+			<column name="LoanStatusCode" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</property>
+		<property name="PersonID" type="Int32" p1:ValidateRequired="true" p1:Guid="72bcf8c6-0509-4cdd-8912-1404de06c937">
+			<column name="PersonID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+		</property>
+		<property name="Body" type="String" p1:ValidateRequired="true" p1:Guid="56a8e957-75bd-4435-bd53-0405aeeb1832">
+			<column name="Body" not-null="true" sql-type="nvarchar" p1:unicode="true" />
+		</property>
+		<property name="CreatedAt" type="DateTime" p1:ValidateRequired="true" p1:Guid="c9772e24-426e-43ab-8d56-1cfe494c992f">
+			<column name="CreatedAt" default="getdate()" not-null="true" sql-type="date" p1:unicode="false" />
+		</property>
+		<many-to-one name="LoanRequest" class="LoanRequest" p1:AssociationGuid="4abc2a8f-cbc5-42a5-b20a-232f2e2e35de" p1:Guid="c3180eea-10f3-457e-8260-68e3bec81717">
+			<column name="LoanRequestID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+		</many-to-one>
+		<many-to-one name="LoanStatus" class="LoanStatus" p1:AssociationGuid="b6fd0519-2c09-4de9-a278-1c1051b332ab" p1:Guid="b372f84c-1762-4504-b4c4-dcd9c14be8aa">
+			<column name="LoanStatusCode" not-null="true" precision="3" scale="0" sql-type="tinyint" p1:unicode="false" />
+		</many-to-one>
+		<many-to-one name="Person" class="Person" p1:AssociationGuid="2351bc0e-abf0-4e37-90be-c519a127e4b4" p1:Guid="d1f52b5d-d2bf-4a87-bce4-acd324e8fb45">
+			<column name="PersonID" not-null="true" precision="10" scale="0" sql-type="int" p1:unicode="false" />
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
+
