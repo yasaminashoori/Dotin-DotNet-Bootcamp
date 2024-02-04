@@ -141,6 +141,8 @@ PersonController:
 
 ### 2.8- <a href="">Practice with Query Strings in URLs</a>
 
+### 2.9- NHibernate project
+
 ### ⌛📋 The Questions and Answers of C# Quiz:
 
 - <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/C%23_Quiz">C# Quiz</a>
