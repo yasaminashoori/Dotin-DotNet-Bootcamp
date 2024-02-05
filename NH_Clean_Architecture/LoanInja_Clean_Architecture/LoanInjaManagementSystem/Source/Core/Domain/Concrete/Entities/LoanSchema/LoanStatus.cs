@@ -1,13 +1,18 @@
 ﻿using Domain.Concrete.Base;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Domain.Concrete.Entities.LoanSchema
 {
-    /// <summary>
-    ///نشان دهنده وضعیت وام 
-    /// </summary>
-    public class LoanStatusType : BaseEntity
+    public class LoanStatus : BaseEntity
     {
-        public LoanStatusType()
+        /// <summary>
+        /// برای نگهداری وضعیت وام، کد وضعیت و وضعیت به زبان فارسی و انگلیسی
+        /// </summary>
+        public LoanStatus()
         {
         }
 
@@ -20,5 +25,4 @@ namespace Domain.Concrete.Entities.LoanSchema
             return $"{Code},{TitleFA},{TitleEN}";
         }
     }
-
 }
