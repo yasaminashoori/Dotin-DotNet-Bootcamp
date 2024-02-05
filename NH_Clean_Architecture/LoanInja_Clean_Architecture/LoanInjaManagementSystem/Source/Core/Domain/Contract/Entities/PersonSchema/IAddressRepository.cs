@@ -2,10 +2,7 @@
 
 namespace Domain.Concrete.Entities.PersonSchema
 {
-    public interface IRoleRepository : IBaseRepository<Role>
+    public interface IAddressRepository : IBaseRepository<Address>, IIdRepository<Address>
     {
-
     }
 }
-
-

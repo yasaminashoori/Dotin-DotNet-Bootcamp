@@ -1,9 +1,10 @@
-﻿using Domain.Concrete.Entities.PersonSchema;
-using Domain.Contract.Base;
+﻿using Domain.Contract.Base;
 
-namespace Domain.Contract.Schema.HR;
-
-public interface IPersonRepository : IBaseRepository<Person>
+namespace Domain.Concrete.Entities.PersonSchema
 {
+    public interface IPersonRepository : IBaseRepository<Person>
+    {
+
+    }
 
 }

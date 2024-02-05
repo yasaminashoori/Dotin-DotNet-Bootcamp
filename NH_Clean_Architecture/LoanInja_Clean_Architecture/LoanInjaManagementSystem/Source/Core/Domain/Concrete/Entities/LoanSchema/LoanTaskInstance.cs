@@ -1,9 +1,4 @@
 ﻿using Domain.Concrete.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Concrete.Entities.LoanSchema
 {
@@ -14,6 +9,7 @@ namespace Domain.Concrete.Entities.LoanSchema
         /// </summary>
         public LoanTaskInstance()
         {
+
         }
 
         public virtual int ID { get; set; }

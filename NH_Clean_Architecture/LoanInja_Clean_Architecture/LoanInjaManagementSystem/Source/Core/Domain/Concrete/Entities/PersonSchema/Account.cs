@@ -2,7 +2,6 @@
 
 namespace Domain.Concrete.Entities.PersonSchema
 {
-
     /// <summary>
     /// موجودیت اکانت
     /// </summary>
@@ -22,7 +21,6 @@ namespace Domain.Concrete.Entities.PersonSchema
         public virtual bool IsActive { get; set; } = false;
         public virtual bool IsVerified { get; set; } = false;
         public virtual string Note { get; set; }
-
 
         /// <summary>
         /// موجودیت های اصلی مدل اکانت را نمایش میدهد

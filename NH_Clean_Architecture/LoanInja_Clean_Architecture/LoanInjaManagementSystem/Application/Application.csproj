@@ -16,10 +16,4 @@
     <ProjectReference Include="..\Source\Presentation\LoanInjaManagementSystem.EndPointAdmin\LoanInjaManagementSystem.EndPointAdmin.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Entity\DboShema\" />
-    <Folder Include="Entity\LoanShema\" />
-    <Folder Include="Entity\InstallmentShema\" />
-  </ItemGroup>
-
 </Project>

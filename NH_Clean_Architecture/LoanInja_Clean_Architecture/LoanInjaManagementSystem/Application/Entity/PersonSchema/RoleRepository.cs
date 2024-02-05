@@ -1,9 +1,8 @@
 ﻿using NHibernate;
 using Application.Base;
-using Domain.Contract.Schema.HR;
 using Domain.Concrete.Entities.PersonSchema;
 
-namespace Application.Schema.HR;
+namespace Application.Entity.PersonSchema;
 
 public class RoleRepository : BaseRepository<Role>, IRoleRepository
 {

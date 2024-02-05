@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NHibernate;
+using Application.Base;
+using Domain.Concrete.Entities.PersonSchema;
 
-namespace Application.Entity.PersonSchema
+namespace Application.Entity.PersonSchema;
+public class PasswordHistoryRepository : BaseRepository<PasswordHistory>, IPasswordHistoryRepository
 {
-    internal class PasswordHistoryRepository
+    public PasswordHistoryRepository(ISession session) : base(session)
     {
+    }
+
+    public PasswordHistory GetById(int id)
+    {
+        throw new NotImplementedException();
     }
 }

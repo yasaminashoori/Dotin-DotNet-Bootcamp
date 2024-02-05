@@ -1,9 +1,5 @@
 ﻿using Domain.Concrete.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Domain.Concrete.Entities.LoanSchema
 {
@@ -14,6 +10,7 @@ namespace Domain.Concrete.Entities.LoanSchema
     {
         public LoanAmount()
         {
+
         }
 
         public virtual byte Code { get; set; }
