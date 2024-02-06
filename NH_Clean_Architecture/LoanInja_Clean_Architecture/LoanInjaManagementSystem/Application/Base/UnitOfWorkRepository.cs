@@ -6,7 +6,7 @@ using Domain.Concrete.Entities.PersonSchema;
 
 namespace Application.Base
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork // rename the file name
     {
         private readonly ISessionFactory _sessionFactory;
         private readonly ITransaction _transaction;
@@ -22,11 +22,11 @@ namespace Application.Base
         private IPersonRepository _personRepository;
         private IRoleRepository _roleRepository;
 
-        private ICodeRepository<Person> _personCodeRepository;
-        private ICodeRepository<Role> _roleCodeRepository;
+        private ICodeRepository<Person> _personCodeRepository; // WHAT ??!!
+        private ICodeRepository<Role> _roleCodeRepository; // WHAT ??!!
 
-        private IIdRepository<Person> _personIdRepository;
-        private IIdRepository<Role> _roleIdRepository;
+        private IIdRepository<Person> _personIdRepository; // WHAT ??!!
+        private IIdRepository<Role> _roleIdRepository; // WHAT ??!!
 
         public IPersonRepository PersonRepository
         {
