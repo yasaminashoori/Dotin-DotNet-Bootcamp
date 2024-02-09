@@ -143,6 +143,8 @@ PersonController:
 
 ### 2.9- NHibernate project
 
+### 3- Frontend project: Slot Machine
+
 ### ⌛📋 The Questions and Answers of C# Quiz:
 
 - <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/C%23_Quiz">C# Quiz</a>

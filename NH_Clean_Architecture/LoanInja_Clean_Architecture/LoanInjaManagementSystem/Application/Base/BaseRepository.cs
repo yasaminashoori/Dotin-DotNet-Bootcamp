@@ -18,6 +18,7 @@ public abstract class BaseRepository<T> : IBaseRepository<T> where T : BaseEntit
         _session.Delete(entity);
     }
 
+    // r you sure? 
     public T Get(int id)
     {
         return _session.Get<T>(id);

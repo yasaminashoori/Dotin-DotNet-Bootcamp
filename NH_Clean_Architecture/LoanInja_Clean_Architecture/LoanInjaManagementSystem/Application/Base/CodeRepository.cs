@@ -10,17 +10,16 @@ namespace Application.Base
         }
 
         public T GetByCode(byte code)
-        {
-            
+        {    
+            // if it was null?
             return _session.Query<T>().FirstOrDefault(x => x.Code == code);
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public byte GetNextValue()
-        {
-            
+        {        
             return (byte)(_session.Query<T>().Max(x => x.Code) + 1);
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }
