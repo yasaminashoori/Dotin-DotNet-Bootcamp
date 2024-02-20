@@ -7,5 +7,10 @@ public class MessageRepository : BaseRepository<Message>, IMessageRepositoryRepo
     public MessageRepository(ISession session) : base(session)
     {
     }
+
+    public override bool IsEntityValidate(Message entity)
+    {
+        throw new NotImplementedException();
+    }
 }
 
