@@ -156,3 +156,6 @@ PersonController:
 2. <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/blob/master/Articles/ViewBag_ViewData_TempData.pdf">ViewBag ViewData TempData</a>
 
 3. <a href="">lifetimes: Singleton, Transient, Scoped</a>
+
+### Topics from SQL, C#, NH, .NET and others...
+
