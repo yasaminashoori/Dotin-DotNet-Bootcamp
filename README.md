@@ -159,3 +159,5 @@ PersonController:
 
 ### Topics from SQL, C#, NH, .NET and others...
 
+1. How to make a Solution, structure of making a project
+2. Helper Methods 
