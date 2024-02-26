@@ -30,7 +30,7 @@ namespace YasTools.Utility
             return string.Concat(str.Substring(0, 1).ToUpper(), str.Substring(1));
 
         }
-
+           
 
     }
 
