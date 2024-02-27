@@ -35,7 +35,7 @@ class Program
         Console.WriteLine("\nWords in Brackets:");
         PrintList(wordsInBrackets);
 
-        Console.WriteLine("\nSpecial Words in Brackets (Non-Recursively, Sorted in Ascending Order):");
+        Console.WriteLine("\nWords in Brackets:");
         PrintList(specialWords);
     }
 
