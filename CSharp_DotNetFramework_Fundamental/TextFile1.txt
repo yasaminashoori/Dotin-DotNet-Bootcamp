@@ -1,0 +1,45 @@
+//using System;
+//using System.Collections.Generic;
+//using System.IO;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+
+//namespace SadrTools.Extension
+//{
+//    public static class ExceptionExtension
+//    {
+//        /// <summary>
+//        /// Log the exception
+//        /// </summary>
+//        public static void LogToFile(this Exception ex, string projectPath)
+//        {
+//            string logFolder = Path.Combine(projectPath, "Logs");
+//            string fileName = Path.Combine(logFolder, DateTime.Now.ToCustomFileName());
+
+//            try
+//            {
+//                if (Directory.Exists(logFolder) == false)
+//                {
+//                    Directory.CreateDirectory(logFolder);
+//                }
+
+//                using (StreamWriter sw = new StreamWriter(fileName, true))
+//                {
+//                    sw.WriteLine($"[{DateTime.Now}] {ex.Message}");
+
+
+//                    if (ex.InnerException != null)
+//                    {
+//                        string innerExceptionMessage = ex.InnerException.Message ?? "Inner exception message is null";
+//                        sw.WriteLine($"Inner Exception: {innerExceptionMessage}");
+//                    }
+//                }
+//            }
+//            catch (Exception e)
+//            {
+//                Console.WriteLine($"Error while saving to file: {e.Message}");
+//            }
+//        }
+//    }
+//}
