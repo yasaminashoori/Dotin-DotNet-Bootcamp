@@ -1,12 +1,21 @@
 # Dotin_DotNet_Bootcamp
 
+# Dotin_DotNet_Bootcamp
+
+- Checklitst ( what i had read and learned):
+
+1. SQL Server
+
+2. C#
+
 ### ✨This is my project and practice for Dotin Bootcamp 1402.
 
 1. Mr.Sadr Resources and refer links:
+
 - <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators">Bitwise MDN</a>
 
 2. My Practice
-   
+
 ### 2.1-<a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/MVCExamples">Guess Number MVC with playing song 🎲🎵</a>
 
 ![GuessNUmber](https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/assets/96047848/999f21e9-a1d4-409f-ac0c-c83ef41964d5)
@@ -14,6 +23,7 @@
 ### 2.2- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/SeparatorPractice">Separator Practice ⚙️</a>
 
 Output:
+
 ```
 Person 1 Infos: ali,alavi,32,M
 Person 2 Infos: reza,rezaee,55,M
@@ -25,6 +35,7 @@ The average age for males ali, reza: 43
 ### 2.3- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/AbbreviationShowName">Abbreviation Name and get the user's time for welcome</a>
 
 Output:
+
 ```
 Enter your firstname:yas
 Enter your lastname:ashoori
@@ -35,12 +46,14 @@ It's 17 PM yas Good Afternoon :D
 ### 2.4- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/CSProjects/TimeSpan">Time Span with OOP ⏳</a>
 
 Output:
+
 ```
 Maede Zohrabi
 Yasamin Ashoori
 The difference of the user BirthDate is: 35 Days.
 
 ```
+
 ### 2-5- <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/Dotin_C%23_Projects/TimeSpan_Example">Time Span usage as Counter</a>
 
 Output:
@@ -114,7 +127,7 @@ Index3:
         </thead>
         <tbody>
             @foreach (var product in Model)
-            { 
+            {
                 <tr>
                     <td class="bg-info">@product.Title</td>
                     <td class="bg-danger">@product.Price</td>
@@ -124,6 +137,7 @@ Index3:
     </table>
 </div>
 ```
+
 PersonController:
 
 ```
@@ -149,7 +163,7 @@ PersonController:
 
 - <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/tree/master/C%23_Quiz">C# Quiz</a>
 
-###  🖊️📝 Articles Written by me for Dotin tasks or more information
+### 🖊️📝 Articles Written by me for Dotin tasks or more information
 
 1. <a href="https://github.com/yasaminashoori/Dotin-DotNet-Bootcamp/blob/master/Articles/IActionResult.pdf">IActionResult</a>
 
@@ -160,4 +174,4 @@ PersonController:
 ### Topics from SQL, C#, NH, .NET and others...
 
 1. How to make a Solution, structure of making a project
-2. Helper Methods 
+2. Helper Methods
