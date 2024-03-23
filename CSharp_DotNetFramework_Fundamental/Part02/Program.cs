@@ -91,7 +91,7 @@ namespace Part02
 
             Console.WriteLine("{0}/{1}/{2}", year, month, day);
 
-            Console.ForegroundColor = ConsoleColor.Green
+            Console.ForegroundColor = ConsoleColor.Green;
 
             Console.WriteLine($"{year}/{month}/{day}");
 
