@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Collections;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CSProjects_Part04
 {
@@ -10,6 +8,23 @@ namespace CSProjects_Part04
     {
         static void Main(string[] args)
         {
+            string s = "Hello";
+
+            // Because string implements IEnumerable, we can call GetEnumerator():
+            IEnumerator rator = s.GetEnumerator();
+
+            while (rator.MoveNext())
+            {
+                char c = (char)rator.Current;
+                Console.Write(c + ".");
+            }
+
+            Console.WriteLine();
+
+            // Equivalent to:
+            foreach (char c in s)
+                Console.Write(c + ".");
+
             string[] daysOfWeek = {
                                       "Monday",
                                       "Tuesday",

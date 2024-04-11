@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deconstructors_Practice", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log_IO", "Log_IO\Log_IO.csproj", "{D06E0376-59AA-4C28-9BFA-056C27AFAC4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFCalculator", "WFCalculator\WFCalculator\WFCalculator.csproj", "{98A2CD9E-5006-44A1-B97E-2DF72C41FE0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,10 @@ Global
 		{D06E0376-59AA-4C28-9BFA-056C27AFAC4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D06E0376-59AA-4C28-9BFA-056C27AFAC4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D06E0376-59AA-4C28-9BFA-056C27AFAC4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98A2CD9E-5006-44A1-B97E-2DF72C41FE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A2CD9E-5006-44A1-B97E-2DF72C41FE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A2CD9E-5006-44A1-B97E-2DF72C41FE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A2CD9E-5006-44A1-B97E-2DF72C41FE0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
