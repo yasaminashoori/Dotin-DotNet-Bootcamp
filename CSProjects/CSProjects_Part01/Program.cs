@@ -1131,12 +1131,27 @@ namespace CSProjects_Part01
                 Console.WriteLine(item);
             }
 
-
+            //Solution1
             name = "Soroush Sadr";
             char[] arrayResult = name.ToCharArray();
             foreach (char item in arrayResult)
             {
                 Console.WriteLine(item);
+            }
+
+            //Solution2
+            var testName = "Yasamin Ashoori";
+            foreach (var n in testName)
+            {
+                Console.WriteLine(n);
+            }
+            
+            //Solution3 for Solution1 Example
+            Console.WriteLine("\n\n");
+            var testName2 = "Soroush Sadr";
+            foreach (var t in testName2.ToCharArray())
+            {
+                Console.WriteLine(t);
             }
 
             Console.ReadKey();
