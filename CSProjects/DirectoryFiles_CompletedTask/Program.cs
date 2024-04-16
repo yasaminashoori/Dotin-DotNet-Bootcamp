@@ -16,6 +16,10 @@ namespace DirectoryFiles_CompletedTask
         {
             DirectoryInfo infoPlace = new DirectoryInfo("C:\\Users\\Yasi\\Desktop\\all");
 
+
+
+
+
             FileInfo[] filesList = infoPlace.GetFiles();
 
             Console.ForegroundColor = ConsoleColor.Green;

@@ -36,7 +36,6 @@ namespace CSProjects_Part03
 
             //Not starts with 4 nor ends with 4 just contains 4 
 
-
             foreach (var n in numbersList)
             {
                 Console.WriteLine(linq01);
