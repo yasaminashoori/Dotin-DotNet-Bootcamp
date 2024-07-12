@@ -1,10 +1,7 @@
  #  🥇 Dotin_DotNet_Bootcamp
 
 - Checklitst ( what i had read and learned):
-
-1. SQL Server
-
-2. C#
+  
 
 ### ✨This is my project and practice for Dotin Bootcamp 1402.
 
