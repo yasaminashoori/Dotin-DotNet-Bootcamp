@@ -3,7 +3,7 @@
  ### 🔴 Feel free to discover and contribute.
  
 
-- Checklitst ( what i had read and learned), this repo will update.
+- Checklitst ( what i had read and learned), this repo will be updated!
   
 
 ### ✨This is my project and practice for Dotin Bootcamp 1402.
