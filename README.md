@@ -1,5 +1,8 @@
  #  🥇 Dotin_DotNet_Bootcamp
 
+ ### 🔴 Feel free to discover and contribute.
+ 
+
 - Checklitst ( what i had read and learned):
   
 
